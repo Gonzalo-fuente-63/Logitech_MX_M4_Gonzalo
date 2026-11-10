@@ -1,0 +1,432 @@
+/* ==========================================================
+   Logitech MX Master 4 · Hoja de estilos
+   Paleta:
+     Gris claro (fondo) #eef1f4
+     Blanco             #ffffff
+     Grafito            #1f2328
+     Verde azulado      #0f766e
+     Azul enlaces       #1d4ed8
+     Amarillo claro     #fff4c2
+     Rojo               #b00020
+     Verde              #166534
+   ========================================================== */
+
+
+/* ---------- 1. Base: color y tipografía ---------- */
+html {
+  scroll-padding-top: 5rem;        /* deja sitio al menú pegado al saltar a un ancla */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #1f2328;
+  background-color: #eef1f4;
+}
+
+
+/* ---------- 2. Cabecera ---------- */
+header {
+  background-color: #1f2328;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.lema {
+  margin: 0.5rem auto 0;
+  max-width: 40rem;
+  color: #eef1f4;
+}
+
+
+/* ---------- 3. Menú de navegación ---------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 4px solid #0f766e;
+  padding: 0.3rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.3rem 1rem;
+  border: 2px solid #1f2328;
+  border-radius: 999px;
+  color: #1f2328;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #1f2328;
+  color: #ffffff;
+}
+
+
+/* ---------- 4. Contenido principal y modelo de caja ---------- */
+main {
+  max-width: 54rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: #ffffff;
+  border: 3px solid #1f2328;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0 #1f2328;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+/* ---------- 5. Encabezados y texto ---------- */
+h2 {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0.2rem 0.8rem;
+  background-color: #0f766e;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+h3 {
+  color: #0f766e;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  color: #1f2328;
+}
+
+em {
+  color: #0f766e;
+}
+
+
+/* ---------- 6. Listas ---------- */
+li {
+  margin-bottom: 0.4rem;
+}
+
+.ficha {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ficha li {
+  padding: 0.4rem 0.8rem;
+  border-left: 4px solid #0f766e;
+  background-color: #eef1f4;
+}
+
+
+/* ---------- 7. Enlaces ---------- */
+a {
+  color: #1d4ed8;
+}
+
+a:hover {
+  color: #0f766e;
+}
+
+a:focus-visible {
+  outline: 4px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.enlaces li {
+  margin-bottom: 0.8rem;
+}
+
+/* Enlace «Saltar al contenido»: escondido hasta que recibe el foco */
+.saltar {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 20;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #1f2328;
+  font-weight: bold;
+}
+
+.saltar:focus {
+  top: 1rem;
+}
+
+
+/* ---------- 8. Imágenes ---------- */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+
+/* ---------- 9. Foto con texto superpuesto ---------- */
+.foto {
+  position: relative;              /* referencia del figcaption */
+  width: fit-content;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.foto figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(31, 35, 40, 0.85);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+
+
+/* ---------- 10. Galería de tarjetas (Flexbox) ---------- */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.galeria article {
+  position: relative;              /* referencia de la etiqueta */
+  flex: 1 1 18rem;
+  box-sizing: border-box;          /* la base de 18rem incluye relleno y borde */
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background-color: #eef1f4;
+  border: 3px solid #1f2328;
+  border-radius: 12px;
+}
+
+.galeria article h3 {
+  margin-top: 0;
+}
+
+.galeria .foto {
+  margin: 0 auto;
+}
+
+/* Etiqueta en la esquina de la tarjeta */
+.etiqueta {
+  position: absolute;
+  top: -0.9rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.1rem 0.8rem;
+  background-color: #b00020;
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #1f2328;
+  border-radius: 999px;
+  transform: rotate(4deg);
+}
+
+
+/* ---------- 11. Cita ---------- */
+blockquote {
+  margin: 1.5rem 0 0;
+  padding: 0.5rem 1.5rem;
+  border-left: 6px solid #0f766e;
+  background-color: #eef1f4;
+  font-style: italic;
+}
+
+
+/* ---------- 12. Línea de tiempo (evolución) ---------- */
+.linea-tiempo {
+  padding-left: 0;
+  list-style: none;
+}
+
+.linea-tiempo li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 3px solid #1f2328;
+  border-radius: 12px;
+}
+
+.linea-tiempo img {
+  flex: 0 1 14rem;
+  width: 14rem;
+  height: 10rem;
+  object-fit: contain;
+  margin: 0;
+}
+
+.linea-tiempo div {
+  flex: 1 1 18rem;
+}
+
+.linea-tiempo h3 {
+  margin-top: 0;
+}
+
+.linea-tiempo .actual {
+  background-color: #fff4c2;
+  border-color: #1d4ed8;
+  box-shadow: 6px 6px 0 #1d4ed8;
+}
+
+.problema,
+.mejora {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+.problema {
+  background-color: #fde8ea;
+  border-left: 4px solid #b00020;
+}
+
+.problema strong {
+  color: #b00020;
+}
+
+.mejora {
+  background-color: #ffffff;
+  border-left: 4px solid #166534;
+}
+
+.mejora strong {
+  color: #166534;
+}
+
+
+/* ---------- 13. Tabla comparativa ---------- */
+.tabla-con-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th,
+td {
+  border: 2px solid #1f2328;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: #fff4c2;
+}
+
+tbody th[scope="row"] {
+  background-color: #eef1f4;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f8fa;
+}
+
+
+/* ---------- 14. Pie de página ---------- */
+footer {
+  background-color: #1f2328;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem 4rem;
+}
+
+footer p {
+  max-width: 50rem;
+  margin: 0 auto 0.5rem;
+}
+
+.creditos {
+  font-size: 0.85rem;
+}
+
+
+/* ---------- 15. Botón «Volver arriba» fijo ---------- */
+.arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0f766e;
+  color: #ffffff;
+  border: 3px solid #1f2328;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 #1f2328;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.arriba:hover {
+  background-color: #1f2328;
+  color: #ffffff;
+}
+
+
+/* ---------- 16. Pantallas estrechas ---------- */
+@media (max-width: 50rem) {
+  nav {
+    position: static;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .linea-tiempo img {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
